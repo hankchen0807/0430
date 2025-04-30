@@ -1,0 +1,129 @@
+<!--
+檔案名稱：index.html
+說明：導覽首頁，提供使用者選擇進入各個作業子頁面。採用科技風格設計，包含滑入動畫、霓虹按鈕、玻璃背景與頁尾資訊。
+製作者：陳嘉翰
+學號：5B3G0041
+-->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第11周作業查詢</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* ⭐️ 加這行實現垂直置中 */
+}
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  /* margin-top: 60px; ← ❌ 刪除或註解 */
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  animation: fadeIn 1.5s ease-out;
+}
+    h1 {
+      font-size: 48px;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    /* 新增這個區塊：按鈕容器設定為 flex 並排 */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 20px;
+      flex-wrap: wrap; /* 若想讓小螢幕可以自動換行則保留 wrap */
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, #1f8ef1, #5f72ff);
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(95, 114, 255, 0.6);
+      white-space: nowrap; /* 防止按鈕內文字換行 */
+    }
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(95, 114, 255, 0.9);
+    }
+
+    .info-box {
+      background-color: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 20px;
+      border-radius: 15px;
+      color: #eee;
+      margin-top: 30px;
+      font-size: 16px;
+      text-align: left;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>第11周作業查詢</h1>
+    <p>姓名：陳嘉翰 ｜ 學號：5B3G0041</p>
+
+    <!-- ✅ 按鈕區加上包裝容器 -->
+    <div class="button-group">
+      <a href="作業1.html" class="button">作業1</a>
+      <a href="fontstyle2.html" class="button">練習1</a>
+      <a href="3.html" class="button">練習2</a>
+
+
+    </div>
+
+    <div class="info-box">
+      <h3>📄 作業內容簡述</h3>
+      <ul>文字裝飾練習(分攔)
+        <li><strong></strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    © 2025/04/30 ｜ 第11周網頁設計作業
+  </footer>
+</body>
+</html>
+
+

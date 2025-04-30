@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nice Weather Decor</title>
+  <style>
+    body {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 3;
+      padding: 20px;
+    }
+
+    .decor-line {
+      position: relative;
+      display: inline-block;
+      margin: 30px 0;
+    }
+
+    .decor-line::before {
+      content: '';
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-size: 20px;
+    }
+
+    /* 第一行：紅色圓點 */
+    .dot-red::before {
+      content: '● ● ●● ● ● ● ● ● ● ●';
+      color: red;
+    }
+
+    /* 第二行：黑色圓點 */
+    .dot-black::before {
+      content: '● ● ● ● ● ● ● ●';
+      color: black;
+    }
+
+    /* 第三行：黃色空心圈 */
+    .circle-yellow::before {
+      content: '○ ○ ○ ○ ○ ○ ○ ○';
+      color: orange;
+    }
+
+    /* 第四行：紫色三角形 */
+    .triangle-purple::before {
+      content: '▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲';
+      color: mediumorchid;
+    }
+
+    /* 第五行：綠色小屋 (Unicode House 🏠 替代 */
+    .house-green::before {
+      content: '🏠 🏠 🏠 🏠 🏠 🏠';
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="decor-line dot-red">Nice Weather!!</div><br>
+  <div class="decor-line dot-black">Nice Weather!!</div><br>
+  <div class="decor-line circle-yellow">Nice Weather!!</div><br>
+  <div class="decor-line triangle-purple">Nice Weather!!</div><br>
+  <div class="decor-line house-green">Nice Weather!!</div>
+
+</body>
+</html>
